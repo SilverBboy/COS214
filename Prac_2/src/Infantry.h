@@ -1,11 +1,11 @@
 #ifndef INFANTRY_H
 #define INFANTRY_H
 #include "Soldiers.h"
-class Infantry : Soldiers {
+class Infantry : public Soldiers {
 
 
 public:
-	virtual Soldiers* clonis() = 0;
+	virtual Soldiers* clonis();
 
 	virtual void engage();
 

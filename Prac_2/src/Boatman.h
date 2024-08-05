@@ -2,11 +2,11 @@
 #define BOATMAN_H
 
 #include "Soldiers.h"
-class Boatman : Soldiers {
+class Boatman : public Soldiers {
 
 
 public:
-	virtual Soldiers* clonis() = 0;
+	virtual Soldiers* clonis();
 
 	virtual void engage();
 

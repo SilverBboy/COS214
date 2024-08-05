@@ -1,11 +1,11 @@
 #ifndef SHIELDBEARER_H
 #define SHIELDBEARER_H
 #include "Soldiers.h"
-class ShieldBearer : Soldiers {
+class ShieldBearer : public Soldiers {
 
 
 public:
-	virtual Soldiers* clonis() = 0;
+	virtual Soldiers* clonis();
 
 	virtual void engage();
 

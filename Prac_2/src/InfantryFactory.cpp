@@ -1,8 +1,11 @@
 #include "InfantryFactory.h"
+#include "Infantry.h"
+
 
 Soldiers* InfantryFactory::createUnit() {
-	// TODO - implement InfantryFactory::createUnit
-	throw "Not yet implemented";
+	// // TODO - implement InfantryFactory::createUnit
+	// throw "Not yet implemented";
+	Soldiers* infantry = new Infantry();
 }
 
 int InfantryFactory::calculateTotalHealthPerUnit() {
