@@ -12,7 +12,7 @@ void Game::start() {
 
         switch (choice) {
         case 1:
-            createUnit(&infantryFactory);
+            //createUnit(&infantryFactory);
             break;
         case 2:
             cloneUnit();
@@ -46,14 +46,8 @@ void Game::displayMenu() {
 }
 
 void Game::cloneUnit() {
-    if (army.empty()) {
-        std::cout << "No units to clone.\n";
-        return;
-    }
-    Soldiers* unit = army.back()->clonis();
-    army.push_back(unit);
-    std::cout << unit->getUnitName() << " unit cloned.\n";
-}
+   // TODO - implement Game::saveState
+	throw "Not yet implemented";}
 
 void Game::engageInBattle() {
 	// TODO - implement Game::engageInBattle
@@ -71,7 +65,6 @@ void Game::restoreState() {
 }
 
 void Game::createUnit(SoldierFactory* factory) {
-    Soldiers* unit = factory->createUnit();
-    army.push_back(unit);
-    std::cout << unit->getUnitName() << " unit created.\n";
+   // TODO - implement Game::saveState
+	throw "Not yet implemented";
 }

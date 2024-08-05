@@ -5,13 +5,13 @@
 #include "Soldiers.h"
 #include "SoldierFactory.h"
 #include "InfantryFactory.h"
-#include "Caretaker.h"
+#include "CareTaker.h"
 
 class Game {
 
 private:
 	CareTaker caretaker;
-	std::vector<Soldiiers*> army;
+	std::vector<Soldiers> army;
 
 public:
 	void start();

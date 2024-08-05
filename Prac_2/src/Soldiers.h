@@ -1,6 +1,8 @@
 #ifndef SOLDIERS_H
 #define SOLDIERS_H
 
+#include <string>
+#include "Memento.h"
 class Soldiers {
 
 private:
@@ -8,7 +10,7 @@ private:
 	int damagePerSoldier;
 	int amountOfSoldiersPerUnit;
 	int defencePerSoldier;
-	string unitName;
+	std::string unitName;
 
 public:
 	virtual Soldiers* clonis() = 0;

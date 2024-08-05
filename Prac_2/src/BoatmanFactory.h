@@ -1,6 +1,8 @@
 #ifndef BOATMANFACTORY_H
 #define BOATMANFACTORY_H
 
+#include "SoldierFactory.h"
+#include "Soldiers.h"
 class BoatmanFactory : SoldierFactory {
 
 

@@ -1,6 +1,6 @@
 #ifndef MEMENTO_H
 #define MEMENTO_H
-
+#include<string>
 class Memento {
 
 private:
@@ -8,9 +8,9 @@ private:
 	int damagePerSoldier;
 	int amountOfSoldiersPerUnit;
 	int defencePerSoldier;
-	string unitName;
+	std::string unitName;
 
-	Memento(int value1, int value2, int value3, int value4, string value5);
+	Memento(int value1, int value2, int value3, int value4, std::string value5);
 };
 
 #endif

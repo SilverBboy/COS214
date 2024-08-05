@@ -1,6 +1,6 @@
 #ifndef INFANTRY_H
 #define INFANTRY_H
-
+#include "Soldiers.h"
 class Infantry : Soldiers {
 
 
