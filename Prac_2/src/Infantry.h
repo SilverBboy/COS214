@@ -20,6 +20,8 @@ private:
 	virtual void retreat();
 
 	virtual void rest();
+
+	virtual ~Infantry();
 };
 
 #endif
