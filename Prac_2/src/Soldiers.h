@@ -33,7 +33,7 @@ private:
 public:
 	Memento* militusMemento();
 
-	Memento* militusMemento2(Memento* mem);
+	Memento* vivificaMemento(Memento* mem);
 };
 
 #endif

@@ -13,7 +13,7 @@ Memento* Soldiers::militusMemento() {
 	throw "Not yet implemented";
 }
 
-Memento* Soldiers::militusMemento2(Memento* mem) {
-	// TODO - implement Soldiers::militusMemento2
-	throw "Not yet implemented";
+Memento* Soldiers::vivificaMemento(Memento* mem) {
+  // TODO - implement Soldiers::vivificaMemento
+  throw "Not yet implemented";
 }

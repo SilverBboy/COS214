@@ -3,7 +3,6 @@
 
 void Game::start() {
     int choice;
-
     while (true) {
         displayMenu();
         std::cout << "Enter your choice: ";
@@ -111,6 +110,10 @@ void Game::engageInBattle() {
 
 void Game::saveState() {
    throw "Not yet implemented";
+   //saveState takes the army, passes it to CareTaker;
+   //CareTaker reads the data from the army vector;
+   //populates the Memento vector with the data
+
 }
 
 void Game::restoreState() {
