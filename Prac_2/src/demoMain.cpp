@@ -8,9 +8,13 @@
 #include "Game.h"
 
 int main() {
-
-    Game game;
-    game.start();
-
-    return 0;
+    try{
+        Game game;
+        game.start();
+        return 0;
+    }
+    catch(char const* message){
+        std::cout<<message<<std::endl;
+    }
+    
 }
