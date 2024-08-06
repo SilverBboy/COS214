@@ -9,8 +9,7 @@ Soldiers::Soldiers(int health, int damage, int defence, int numUnits, std::strin
 
 }
 Memento* Soldiers::militusMemento() {
-	// TODO - implement Soldiers::militusMemento
-	throw "Not yet implemented";
+	return new Memento(healthPerSoldier, damagePerSoldier, defencePerSoldier, amountOfSoldiersPerUnit, unitName);
 }
 
 Memento* Soldiers::vivificaMemento(Memento* mem) {

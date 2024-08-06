@@ -3,6 +3,7 @@
 
 void Game::start() {
     int choice;
+    CareTaker* caretaker = new CareTaker();
     while (true) {
         displayMenu();
         std::cout << "Enter your choice: ";
@@ -110,10 +111,14 @@ void Game::engageInBattle() {
 
 void Game::saveState() {
    throw "Not yet implemented";
-   //saveState takes the army, passes it to CareTaker;
-   //CareTaker reads the data from the army vector;
-   //populates the Memento vector with the data
-
+   //saveState takes the army vector, loops through it, calls militusMemento for each unit
+        //{
+        //   after getting the memento of each unit, it calls the caretaker.save(unitMemento) and saves it for each unit.
+        //}
+    for (auto& unit : army){
+        Memento* saveData = unit->militusMemento();
+        caretaker.save(saveData);
+    }
 }
 
 void Game::restoreState() {
