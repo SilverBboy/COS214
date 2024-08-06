@@ -7,14 +7,19 @@
 #include "InfantryFactory.h"
 #include "Game.h"
 
-int main() {
-    try{
-        Game game;
-        game.start();
-        return 0;
-    }
-    catch(char const* message){
-        std::cout<<message<<std::endl;
-    }
-    
-}//this is a comments
+int main()
+{
+	while (true)
+	{
+		try
+		{
+			Game game;
+			game.start();
+			return 0;
+		}
+		catch (char const *message)
+		{
+			std::cout << message << std::endl <<std::endl;
+		}
+	}
+}

@@ -118,6 +118,12 @@ void Game::restoreState() {
 }
 
 void Game::createUnit(SoldierFactory* factory) {
-    Soldiers* unit = factory->createUnit(10,"unitname");
+    std::string name;
+    int numSoldiers;
+    std::cout << "\nUnit Name: ";
+    std::cin >> name;
+    std::cout << "\nNumber of soldiers in Unit: ";
+    std::cin >> numSoldiers;
+    Soldiers* unit = factory->createUnit(numSoldiers,name);
     army.push_back(unit);
 }
