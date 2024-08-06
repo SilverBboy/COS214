@@ -1,6 +1,9 @@
 #ifndef SHIELDBEARERFACTORY_H
 #define SHIELDBEARERFACTORY_H
 #include "SoldierFactory.h"
+#include "Soldiers.h"
+#include "ShieldBearer.h"
+#include <string>
 
 class ShieldBearerFactory : public SoldierFactory {
 

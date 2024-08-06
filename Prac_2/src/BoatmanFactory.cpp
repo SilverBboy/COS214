@@ -1,8 +1,9 @@
 #include "BoatmanFactory.h"
+#include <iostream>
 
 Soldiers* BoatmanFactory::createUnit(int numSoldiers, std::string name) {
-	// TODO - implement BoatmanFactory::createUnit
-	throw "Not yet implemented";
+	Soldiers* boatman = new Boatman(numSoldiers,name);
+	return boatman;
 }
 
 int BoatmanFactory::calculateTotalHealthPerUnit() {

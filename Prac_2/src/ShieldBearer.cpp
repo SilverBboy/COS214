@@ -1,4 +1,10 @@
 #include "ShieldBearer.h"
+#include <iostream>
+ShieldBearer::ShieldBearer(int numSoldiers,std::string name) 
+:Soldiers(100,50,10,numSoldiers,name)
+{
+	std::cout<<"You created the ShieldBearer Unit '" <<name<< "' with " <<numSoldiers << " soldiers\n";
+}
 
 void ShieldBearer::engage() {
 	// TODO - implement ShieldBearer::engage

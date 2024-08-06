@@ -1,5 +1,4 @@
 #include "InfantryFactory.h"
-#include "Infantry.h"
 
 
 Soldiers* InfantryFactory::createUnit(int numSoldiers, std::string name) {

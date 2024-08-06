@@ -1,8 +1,8 @@
 #include "ShieldBearerFactory.h"
 
 Soldiers* ShieldBearerFactory::createUnit(int numSoldiers, std::string name) {
-	// TODO - implement ShieldBearerFactory::createUnit
-	throw "Not yet implemented";
+	Soldiers* shieldBearer = new ShieldBearer(numSoldiers,name);
+	return shieldBearer;
 }
 
 int ShieldBearerFactory::calculateTotalHealthPerUnit() {

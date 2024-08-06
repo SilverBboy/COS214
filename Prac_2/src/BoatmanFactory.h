@@ -3,6 +3,8 @@
 
 #include "SoldierFactory.h"
 #include "Soldiers.h"
+#include "Boatman.h"
+#include <string>
 class BoatmanFactory : public SoldierFactory {
 
 

@@ -9,6 +9,7 @@ Infantry::Infantry(int numSoldiers,std::string name)
 	std::cout<<"You created the Infantry Unit '" <<name<< "' with " <<numSoldiers << " soldiers\n";
 }
 Infantry::~Infantry() {
+
 }
 
 // Implementations of virtual methods
