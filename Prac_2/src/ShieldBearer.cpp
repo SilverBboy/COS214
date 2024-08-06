@@ -29,3 +29,7 @@ void ShieldBearer::rest() {
 	// TODO - implement ShieldBearer::rest
 	throw "Not yet implemented";
 }
+
+Soldiers* ShieldBearer::clonis(){
+	throw "Not yet implemented";
+}
