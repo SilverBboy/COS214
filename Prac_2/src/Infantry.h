@@ -12,6 +12,7 @@ public:
 	virtual void disengage();
 
 private:
+//needs a constructor to set basic values
 	virtual void prepare();
 
 	virtual void execute();

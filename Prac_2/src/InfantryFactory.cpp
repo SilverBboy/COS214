@@ -6,11 +6,13 @@ Soldiers* InfantryFactory::createUnit() {
 	// // TODO - implement InfantryFactory::createUnit
 	// throw "Not yet implemented";
 	Soldiers* infantry = new Infantry();
+	return infantry;
 }
 
 int InfantryFactory::calculateTotalHealthPerUnit() {
 	// TODO - implement InfantryFactory::calculateTotalHealthPerUnit
 	throw "Not yet implemented";
+
 }
 
 int InfantryFactory::calculateTotalDamagePerUnit() {
