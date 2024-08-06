@@ -5,29 +5,28 @@
 #include "Soldiers.h"
 #include "SoldierFactory.h"
 #include "InfantryFactory.h"
+#include "BoatmanFactory.h"
+#include "ShieldBearerFactory.h"
 #include "CareTaker.h"
 
 class Game {
-
 private:
-	CareTaker caretaker;
-	std::vector<Soldiers> army;
+    CareTaker caretaker;
+    std::vector<Soldiers*> army;
 
 public:
-	void start();
+    void start();
 
 private:
-	void displayMenu();
-
-	void cloneUnit();
-
-	void engageInBattle();
-
-	void saveState();
-
-	void restoreState();
-
-	void createUnit(SoldierFactory* factory);
+    void displayMenu();
+    void displaySoldierMenu();
+    void createUnitMenu();
+    void cloneUnit();
+    void engageInBattle();
+    void showArmy();
+    void saveState();
+    void restoreState();
+    void createUnit(SoldierFactory* factory);
 };
 
-#endif
+#endif // GAME_H
