@@ -2,10 +2,8 @@
 #include "Infantry.h"
 
 
-Soldiers* InfantryFactory::createUnit() {
-	// // TODO - implement InfantryFactory::createUnit
-	// throw "Not yet implemented";
-	Soldiers* infantry = new Infantry();
+Soldiers* InfantryFactory::createUnit(int numSoldiers, std::string name) {
+	Soldiers* infantry = new Infantry(numSoldiers,name);
 	return infantry;
 }
 

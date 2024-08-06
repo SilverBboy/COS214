@@ -8,7 +8,7 @@ private:
 	Soldiers* soldiers;
 
 protected:
-	virtual Soldiers* createUnit() = 0;
+	virtual Soldiers* createUnit(int numSoldiers, std::string name) = 0;
 
 	virtual int calculateTotalHealthPerUnit() = 0;
 

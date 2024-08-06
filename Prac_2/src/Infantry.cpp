@@ -1,8 +1,13 @@
 #include "Infantry.h"
+#include <iostream>
 
 
 
-// Destructor
+Infantry::Infantry(int numSoldiers,std::string name) 
+:Soldiers(100,50,10,numSoldiers,name)
+{
+	std::cout<<"Created Infantry Unit " <<name<< " with " <<numSoldiers << " soldiers\n";
+}
 Infantry::~Infantry() {
 }
 

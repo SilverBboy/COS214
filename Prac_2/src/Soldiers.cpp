@@ -1,5 +1,13 @@
 #include "Soldiers.h"
+Soldiers::Soldiers(int health, int damage, int defence, int numUnits, std::string name)
+    : healthPerSoldier(health),
+      damagePerSoldier(damage),
+      defencePerSoldier(defence),
+      amountOfSoldiersPerUnit(numUnits),
+      unitName(name)
+{
 
+}
 Memento* Soldiers::militusMemento() {
 	// TODO - implement Soldiers::militusMemento
 	throw "Not yet implemented";

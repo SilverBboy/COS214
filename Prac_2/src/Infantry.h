@@ -1,10 +1,13 @@
 #ifndef INFANTRY_H
 #define INFANTRY_H
 #include "Soldiers.h"
+#include <string>
 class Infantry : public Soldiers {
 
 
 public:
+	Infantry(int numSoldiers,std::string name);
+
 	virtual Soldiers* clonis();
 
 	virtual void engage();

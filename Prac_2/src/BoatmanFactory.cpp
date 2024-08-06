@@ -1,6 +1,6 @@
 #include "BoatmanFactory.h"
 
-Soldiers* BoatmanFactory::createUnit() {
+Soldiers* BoatmanFactory::createUnit(int numSoldiers, std::string name) {
 	// TODO - implement BoatmanFactory::createUnit
 	throw "Not yet implemented";
 }

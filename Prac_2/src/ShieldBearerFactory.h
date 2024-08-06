@@ -6,7 +6,7 @@ class ShieldBearerFactory : public SoldierFactory {
 
 
 public:
-	virtual Soldiers* createUnit();
+	virtual Soldiers* createUnit(int numSoldiers, std::string name);
 
 	virtual int calculateTotalHealthPerUnit();
 

@@ -1,6 +1,6 @@
 #include "ShieldBearerFactory.h"
 
-Soldiers* ShieldBearerFactory::createUnit() {
+Soldiers* ShieldBearerFactory::createUnit(int numSoldiers, std::string name) {
 	// TODO - implement ShieldBearerFactory::createUnit
 	throw "Not yet implemented";
 }

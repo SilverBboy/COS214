@@ -11,8 +11,10 @@ private:
 	int amountOfSoldiersPerUnit;
 	int defencePerSoldier;
 	std::string unitName;
-
+protected:
+	Soldiers(int health, int damage, int defence, int numUnits, std::string name);
 public:
+	
 	virtual Soldiers* clonis() = 0;
 
 	virtual void engage() = 0;
