@@ -17,6 +17,7 @@ protected:
 	virtual int calculateTotalDefencePerUnit() = 0;
 
 	SoldierFactory();
+	friend class Game;
 };
 
 #endif

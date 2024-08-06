@@ -2,7 +2,7 @@
 #define INFANTRYFACTORY_H
 #include "SoldierFactory.h"
 #include "Soldiers.h"
-class InfantryFactory : SoldierFactory {
+class InfantryFactory : public SoldierFactory {
 
 
 public:

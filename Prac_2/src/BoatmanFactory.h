@@ -3,7 +3,7 @@
 
 #include "SoldierFactory.h"
 #include "Soldiers.h"
-class BoatmanFactory : SoldierFactory {
+class BoatmanFactory : public SoldierFactory {
 
 
 public:
