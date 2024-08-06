@@ -1,23 +1,12 @@
 # Define the compiler and the flags
 CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++17 -I/home/morne/projects/COS214/Prac_2/src
+CXXFLAGS = -Wall -Wextra -std=c++17 -I./src
 
 # Define the target executable
 TARGET = demoMain
 
 # Define the source files
-SRCS = /home/morne/projects/COS214/Prac_2/src/Boatman.cpp \
-       /home/morne/projects/COS214/Prac_2/src/BoatmanFactory.cpp \
-       /home/morne/projects/COS214/Prac_2/src/CareTaker.cpp \
-       /home/morne/projects/COS214/Prac_2/src/Game.cpp \
-       /home/morne/projects/COS214/Prac_2/src/Infantry.cpp \
-       /home/morne/projects/COS214/Prac_2/src/InfantryFactory.cpp \
-       /home/morne/projects/COS214/Prac_2/src/Memento.cpp \
-       /home/morne/projects/COS214/Prac_2/src/ShieldBearer.cpp \
-       /home/morne/projects/COS214/Prac_2/src/ShieldBearerFactory.cpp \
-       /home/morne/projects/COS214/Prac_2/src/SoldierFactory.cpp \
-       /home/morne/projects/COS214/Prac_2/src/Soldiers.cpp \
-       /home/morne/projects/COS214/Prac_2/src/demoMain.cpp
+SRCS = Boatman.cpp BoatmanFactory.cpp CareTaker.cpp Game.cpp Infantry.cpp InfantryFactory.cpp Memento.cpp ShieldBearer.cpp ShieldBearerFactory.cpp SoldierFactory.cpp Soldiers.cpp demoMain.cpp
 
 # Define the object files
 OBJS = $(SRCS:.cpp=.o)
