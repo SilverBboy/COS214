@@ -1,4 +1,5 @@
 #include "ShieldBearerFactory.h"
+#include <iostream>
 
 Soldiers* ShieldBearerFactory::createUnit(int numSoldiers, std::string name) {
 	Soldiers* shieldBearer = new ShieldBearer(numSoldiers,name);
@@ -6,16 +7,16 @@ Soldiers* ShieldBearerFactory::createUnit(int numSoldiers, std::string name) {
 }
 
 int ShieldBearerFactory::calculateTotalHealthPerUnit() {
-	// TODO - implement ShieldBearerFactory::calculateTotalHealthPerUnit
-	throw "Not yet implemented";
+	std::cout<<"Calculating ShieldBearer health"<<std::endl;
+	return (getSoldiers()->getHealth() * getSoldiers()->getAmountOfSoldiers());
 }
 
 int ShieldBearerFactory::calculateTotalDamagePerUnit() {
-	// TODO - implement ShieldBearerFactory::calculateTotalDamagePerUnit
-	throw "Not yet implemented";
+	std::cout<<"Calculating ShieldBearer damage"<<std::endl;
+	return (getSoldiers()->getDamage() * getSoldiers()->getAmountOfSoldiers());
 }
 
 int ShieldBearerFactory::calculateTotalDefencePerUnit() {
-	// TODO - implement ShieldBearerFactory::calculateTotalDefencePerUnit
-	throw "Not yet implemented";
+	std::cout<<"Calculating ShieldBearer defense"<<std::endl;
+	return (getSoldiers()->getDefense() * getSoldiers()->getAmountOfSoldiers());
 }

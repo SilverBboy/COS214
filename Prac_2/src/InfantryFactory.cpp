@@ -1,5 +1,5 @@
 #include "InfantryFactory.h"
-
+#include <iostream>
 
 Soldiers* InfantryFactory::createUnit(int numSoldiers, std::string name) {
 	Soldiers* infantry = new Infantry(numSoldiers,name);
@@ -7,17 +7,16 @@ Soldiers* InfantryFactory::createUnit(int numSoldiers, std::string name) {
 }
 
 int InfantryFactory::calculateTotalHealthPerUnit() {
-	// TODO - implement InfantryFactory::calculateTotalHealthPerUnit
-	throw "Not yet implemented";
-
+	std::cout<<"Calculating infantry health"<<std::endl;
+	return (getSoldiers()->getHealth() * getSoldiers()->getAmountOfSoldiers());
 }
 
 int InfantryFactory::calculateTotalDamagePerUnit() {
-	// TODO - implement InfantryFactory::calculateTotalDamagePerUnit
-	throw "Not yet implemented";
+	std::cout<<"Calculating infantry damage"<<std::endl;
+	return (getSoldiers()->getDamage() * getSoldiers()->getAmountOfSoldiers());
 }
 
 int InfantryFactory::calculateTotalDefencePerUnit() {
-	// TODO - implement InfantryFactory::calculateTotalDefencePerUnit
-	throw "Not yet implemented";
+	std::cout<<"Calculating infantry defense"<<std::endl;
+	return (getSoldiers()->getDefense() * getSoldiers()->getAmountOfSoldiers());
 }

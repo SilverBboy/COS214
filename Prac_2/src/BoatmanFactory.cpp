@@ -7,16 +7,16 @@ Soldiers* BoatmanFactory::createUnit(int numSoldiers, std::string name) {
 }
 
 int BoatmanFactory::calculateTotalHealthPerUnit() {
-	// TODO - implement BoatmanFactory::calculateTotalHealthPerUnit
-	throw "Not yet implemented";
+	std::cout<<"Calculating Boatman health"<<std::endl;
+	return (getSoldiers()->getHealth() * getSoldiers()->getAmountOfSoldiers());
 }
 
 int BoatmanFactory::calculateTotalDamagePerUnit() {
-	// TODO - implement BoatmanFactory::calculateTotalDamagePerUnit
-	throw "Not yet implemented";
+	std::cout<<"Calculating Boatman health"<<std::endl;
+	return (getSoldiers()->getDamage() * getSoldiers()->getAmountOfSoldiers());
 }
 
 int BoatmanFactory::calculateTotalDefencePerUnit() {
-	// TODO - implement BoatmanFactory::calculateTotalDefencePerUnit
-	throw "Not yet implemented";
+	std::cout<<"Calculating Boatman health"<<std::endl;
+	return (getSoldiers()->getDefense() * getSoldiers()->getAmountOfSoldiers());
 }

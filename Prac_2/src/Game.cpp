@@ -71,10 +71,10 @@ void Game::createUnitMenu() {
                 factory = new InfantryFactory();
                 break;
             case 2:
-                factory = new BoatmanFactory();
+                //factory = new BoatmanFactory();
                 break;
             case 3:
-                factory = new ShieldBearerFactory();
+                // /factory = new ShieldBearerFactory();
                 break;
             case 4:
                 return;
@@ -85,7 +85,6 @@ void Game::createUnitMenu() {
 
         if (factory) {
             createUnit(factory);
-            delete factory;
             factory = nullptr;
         }
     }

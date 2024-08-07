@@ -20,6 +20,11 @@ public:
 	virtual void engage() = 0;
 
 	virtual void disengage() = 0;
+	
+	int getHealth();
+	int getDamage();
+	int getDefense();
+	int getAmountOfSoldiers();
 
 private:
 	virtual void prepare() = 0;
