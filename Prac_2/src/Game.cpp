@@ -79,8 +79,7 @@ void Game::createUnitMenu() {
             case 4:
                 return;
             default:
-                std::cout << "Invalid choice. Please try again.\n";
-                continue;
+                 throw "Invalid option please try again";
         }
 
         if (factory) {
