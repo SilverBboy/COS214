@@ -25,7 +25,8 @@ private:
     void engageInBattle();
     void showArmy();
     void saveState();
-    void restoreState();
+    void undo();
+    void redo();
     void createUnit(SoldierFactory* factory);
 };
 

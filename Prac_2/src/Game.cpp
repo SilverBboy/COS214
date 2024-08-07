@@ -24,9 +24,12 @@ void Game::start() {
                 saveState();
                 break;
             case 5: // Restore state
-                restoreState();
+                undo();
                 break;
             case 6: // Exit
+                redo();
+                return;
+            case 7: // Exit
                 std::cout << "Exiting game.\n";
                 return;
             default:
@@ -41,8 +44,9 @@ void Game::displayMenu() {
     std::cout << "2. Clone Unit\n";
     std::cout << "3. Engage in Battle\n";
     std::cout << "4. Save State\n";
-    std::cout << "5. Restore State\n";
-    std::cout << "6. Exit\n";
+    std::cout << "5. Undo State\n";
+    std::cout << "6. Redo State\n";
+    std::cout << "7. Exit\n";
 }
 
 void Game::displaySoldierMenu() {
@@ -110,19 +114,44 @@ void Game::engageInBattle() {
 }
 
 void Game::saveState() {
-   throw "Not yet implemented";
-   //saveState takes the army vector, loops through it, calls militusMemento for each unit
-        //{
-        //   after getting the memento of each unit, it calls the caretaker.save(unitMemento) and saves it for each unit.
-        //}
+    std::vector <Memento*> saveData;
     for (auto& unit : army){
-        Memento* saveData = unit->militusMemento();
-        caretaker.save(saveData);
+        Memento* currentData = unit->militusMemento();
+        saveData.push_back(currentData);
+    }
+        caretaker.batchSave(saveData);
+}
+
+void Game::undo() {
+    std::vector <Memento*> saveData;
+    for (auto& unit : army){
+        Memento* currentData = unit->militusMemento();
+        saveData.push_back(currentData);
+    }
+
+    std::vector <Memento*> undoData = caretaker.batchUndo(saveData);
+    for (int i = 0; i < army.size(); i++){
+        if (undoData[i] == nullptr){
+            // means the unit does not have any more undo data, thus it should be deleted
+            delete army[i];
+            army.erase(army.begin() + i);
+            continue;
+        }
+        Memento* currentData = army[i]->vivificaMemento(undoData[i]);
     }
 }
 
-void Game::restoreState() {
-    throw "Not yet implemented";
+void Game::redo() {
+    std::vector <Memento*> saveData;
+    for (auto& unit : army){
+        Memento* currentData = unit->militusMemento();
+        saveData.push_back(currentData);
+    }
+
+    std::vector <Memento*> redoData = caretaker.batchRedo(saveData);
+    for (int i = 0; i < army.size(); i++){
+        army[i]->vivificaMemento(redoData[i]);
+    }
 }
 
 void Game::createUnit(SoldierFactory* factory) {

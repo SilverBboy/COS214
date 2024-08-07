@@ -16,6 +16,10 @@ private:
 	Memento(int value1, int value2, int value3, int value4, std::string value5);
 
 public:
+	int getHealthPerSoldier();
+	int getDamagePerSoldier();
+	int getAmountOfSoldiersPerUnit();
+	int getDefencePerSoldier();
 	std::string getUnitName();
 };
 

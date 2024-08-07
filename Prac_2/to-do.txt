@@ -1,0 +1,2 @@
+1. Make sure all the checks are done
+2. Make sure all destructors are added

@@ -13,6 +13,10 @@ Memento* Soldiers::militusMemento() {
 }
 
 Memento* Soldiers::vivificaMemento(Memento* mem) {
-  // TODO - implement Soldiers::vivificaMemento
-  throw "Not yet implemented";
+  healthPerSoldier = mem->getHealthPerSoldier();
+  damagePerSoldier = mem->getDamagePerSoldier();
+  defencePerSoldier = mem->getAmountOfSoldiersPerUnit();
+  amountOfSoldiersPerUnit = mem->getDefencePerSoldier();
+  unitName = mem->getUnitName();
+  return new Memento(healthPerSoldier, damagePerSoldier, defencePerSoldier, amountOfSoldiersPerUnit, unitName);
 }

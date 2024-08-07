@@ -11,3 +11,19 @@ Memento::Memento(int value1, int value2, int value3, int value4, std::string val
 std::string Memento::getUnitName() {
 	return this->unitName;
 }
+
+int Memento::getHealthPerSoldier(){
+	return this->healthPerSoldier;
+}
+
+int Memento::getDamagePerSoldier(){
+	return this->damagePerSoldier;
+}
+
+int Memento::getAmountOfSoldiersPerUnit(){
+	return this->amountOfSoldiersPerUnit;
+}
+
+int Memento::getDefencePerSoldier(){	
+	return this->defencePerSoldier;
+}
