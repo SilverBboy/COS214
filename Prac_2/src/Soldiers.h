@@ -34,6 +34,8 @@ public:
 	Memento* militusMemento();
 
 	Memento* vivificaMemento(Memento* mem);
+
+	std::string getUnitName();
 };
 
 #endif

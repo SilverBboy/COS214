@@ -23,10 +23,10 @@ void Game::start() {
             case 4: // Save state
                 saveState();
                 break;
-            case 5: // Restore state
+            case 5: // Undo/Restore state
                 undo();
                 break;
-            case 6: // Exit
+            case 6: // Redo state
                 redo();
                 return;
             case 7: // Exit
@@ -142,16 +142,36 @@ void Game::undo() {
 }
 
 void Game::redo() {
+    //Restoring the state of the Army.
+    //read the state of the Memento vector from the caretaker
+    //iterate over the Memento vector and restore the state of each unit in the army
+        //at each iteration
+        //compare the name of the unit in Memento at i and the unit in the army at i
+        //if the names are the same, restore the state of the unit in the army at i
+        //if the names are different, create a new unit with the state of the Memento at i and add it to the army at that position
+        //if the Memento at i is nullptr, means the unit does not have any more redo data, thus ignore it
+    //continue until the end of the Memento vector
+
     std::vector <Memento*> saveData;
+
     for (auto& unit : army){
         Memento* currentData = unit->militusMemento();
         saveData.push_back(currentData);
     }
 
     std::vector <Memento*> redoData = caretaker.batchRedo(saveData);
-    for (int i = 0; i < army.size(); i++){
-        army[i]->vivificaMemento(redoData[i]);
-    }
+    std::string mementoUnitName;
+    std::string armyUnitName;
+
+    for (int i = 0; i < redoData.size(); i++){
+        mementoUnitName = redoData[i]->getUnitName();
+        armyUnitName = army[i]->getUnitName();
+        //if the names are the same, restore the state of the unit in the army at i
+        if (mementoUnitName == armyUnitName){
+            Memento* currentData = army[i]->vivificaMemento(redoData[i]);
+        } 
+        Memento* currentData = army[i]->vivificaMemento(redoData[i]);
+    }    
 }
 
 void Game::createUnit(SoldierFactory* factory) {

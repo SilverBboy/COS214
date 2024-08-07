@@ -1,4 +1,5 @@
 #include "Soldiers.h"
+
 Soldiers::Soldiers(int health, int damage, int defence, int numUnits, std::string name)
     : healthPerSoldier(health),
       damagePerSoldier(damage),
@@ -19,4 +20,9 @@ Memento* Soldiers::vivificaMemento(Memento* mem) {
   amountOfSoldiersPerUnit = mem->getDefencePerSoldier();
   unitName = mem->getUnitName();
   return new Memento(healthPerSoldier, damagePerSoldier, defencePerSoldier, amountOfSoldiersPerUnit, unitName);
+}
+
+std::string Soldiers::getUnitName()
+{
+  return unitName;
 }

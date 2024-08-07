@@ -12,7 +12,8 @@ private:
 	int amountOfSoldiersPerUnit;
 	int defencePerSoldier;
 	std::string unitName;
-
+// in order to avoid confusion with duplicate names, we could add another attribute, called uniqueID
+//it will take the name and its index in the vector, so we can have multiple units with the same name
 	Memento(int value1, int value2, int value3, int value4, std::string value5);
 
 public:
