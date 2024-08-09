@@ -27,3 +27,11 @@ int Memento::getAmountOfSoldiersPerUnit(){
 int Memento::getDefencePerSoldier(){	
 	return this->defencePerSoldier;
 }
+
+std::string Memento::getUniqueID(){
+	return this->uniqueID;
+}
+
+void Memento::setUniqueID(int index){
+	this->uniqueID = this->unitName + std::to_string(index);
+}

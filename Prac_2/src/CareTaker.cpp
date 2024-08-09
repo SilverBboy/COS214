@@ -21,7 +21,7 @@ std::vector<std::pair<std::string, std::vector<Memento *>>>::iterator CareTaker:
             return it;
         }
     }
-    return history.end();
+    return history.end(); 
 }
 
 void CareTaker::save(Memento *mem)

@@ -114,8 +114,11 @@ void Game::engageInBattle() {
 
 void Game::saveState() {
     std::vector <Memento*> saveData;
+    int i = 0;
     for (auto& unit : army){
         Memento* currentData = unit->militusMemento();
+        currentData->setUniqueID(i);
+        i++;
         saveData.push_back(currentData);
     }
         caretaker.batchSave(saveData);
